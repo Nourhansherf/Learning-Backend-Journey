@@ -7,7 +7,9 @@
     - This is a basic HTTP server with HTTP module
 - [ ] [Project3](./Project3/)
     - This is a basic project i made after i learned about express.js and how to connect files and folder with my server
-    
+- [ ] [Project4](./Project4/)
+    - This is a basic project i made after i leared EJS and how to make my website dynamic :)
+
 
 
 
