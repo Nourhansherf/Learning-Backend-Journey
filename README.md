@@ -15,6 +15,10 @@
     - Learned MongoDB
     - Learned CRUD operation ( How to Create, Read, Update, delete )
     - Learned how to make a controller folder to manage connection with MongoDB
+- [ ] [TypeScript Journey](./TypeScript%20Journey/)
+    - No projects for this 😢
+    - But i learned TypeScript 
+    - How to add TypeScript to my Express project 
 
 
 
