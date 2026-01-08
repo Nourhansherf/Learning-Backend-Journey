@@ -1,0 +1,14 @@
+#TypeScript #javacript 
+
+- `noImplicitAny: false`
+	- Will allow variables to have an implicit 'any' type
+- `noImplicitreturns: true`
+	- Will check if all code paths in a function return a value
+- `noUnusedLocals: true`
+	- Will report errors on unused local variables
+- `noUnusedParameters: true`
+	- Will report errors on unused function parameters
+- `allowUnreachableCode: false`
+	- Will report you if you make a function after your return statement like this : ![[Pasted image 20260108194337.png]]
+
+---
