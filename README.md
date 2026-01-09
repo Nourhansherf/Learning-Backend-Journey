@@ -19,6 +19,8 @@
     - No projects for this 😢
     - But i learned TypeScript 
     - How to add TypeScript to my Express project 
+- [ ] [Practice Projects](./practice%20projects/)
+    - Here i watched people making projects and leared from them
 
 
 
