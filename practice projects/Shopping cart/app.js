@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
+
 // use express
 const port = 3000;
 const app = express();
@@ -20,10 +21,12 @@ app.set('view engine', 'ejs');
 // use public 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// initial get 
-app.get('/', (req, res) => {
-    res.send('working');
-});
+// Router configuration
+const pages = require('./routes/pages');
+const admin_pages = require('./routes/admin_pages');
+
+app.use('/admin/pages', admin_pages);
+app.use('/', pages);
 
 // listning 
 app.listen(port, () => {
