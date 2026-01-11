@@ -4,7 +4,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 var session = require('express-session');
-const expressvalidator = require('express-validator');
 // body-parser express-session express-validator express message
 
 // use express
@@ -25,7 +24,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // bodyparser middleware
-app.use(bodyParser.urlencoded({ urlencoded: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // express session conf
@@ -33,26 +32,13 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    // secure should be true only when using HTTPS; keep false for local dev
+    cookie: { secure: false }
 }));
 
-// express validation middle ware
-app.use(expressvalidator({
-    errorFormatter: function (param, msg, value) {
-        var namespace = param.split('.'),
-            root = namespace.shift(),
-            formParam = root;
-        
-        while (namespace.length) {
-            formParam += '[' + namespace.shift() + ']';
-        }
-        return {
-            param: formParam,
-            msg: msg,
-            value: value
-        };
-    }
-}));
+// Note: express-validator v6+ does not provide a global middleware function.
+// Use validation chains (check, body) and validationResult inside route handlers.
+// The old global `expressValidator()` middleware was removed — remove its usage here.
 
 // express messages middleware
 app.use(require('connect-flash')());
