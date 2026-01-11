@@ -54,4 +54,12 @@
         
       
 
-<%- messages('messages', locals) %>
+<%- messages() %>
+
+<% if (typeof errors !== 'undefined' && errors && errors.length) { %>
+    <% errors.forEach(function(error) { %>
+      <div class="alert alert-danger">
+        <%= error.msg %>
+      </div>
+    <% }) %>
+<% } %>
