@@ -5,14 +5,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const connectDB = require('./config/db');
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const session = require('express-session');
+const MongoSession = require('connect-mongodb-session')(session);
+
 
 const port = process.env.PORT || 3000;
-
-//routes
-// const indexRouter = require('./routes/index');
-// // const usersRouter = require('./routes/users');
-// const registerRouter = require('./routes/register');
-// const loginRouter = require('./routes/login');
 
 const app = express();
 //connect DB
@@ -27,6 +26,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+const store = new MongoSession({
+  uri: process.env.MONGO_URI,
+  collection: 'users'
+});
+
+app.use(session({
+  secret: 'testingsecretforcoursevalidation',
+  resave: false,
+  saveUninitialized: true,
+  store: store,
+}))
 
 
 // Router configurations

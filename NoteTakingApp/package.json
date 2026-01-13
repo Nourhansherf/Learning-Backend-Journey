@@ -6,6 +6,7 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
+    "connect-mongodb-session": "^5.0.0",
     "cookie-parser": "~1.4.4",
     "dcrypt": "^0.0.2",
     "debug": "~2.6.9",
