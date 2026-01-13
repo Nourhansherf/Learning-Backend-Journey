@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     const { username, email, password } = req.body;
     let user = await UserModel.findOne({ email });
     if (user) {
-        res.redirect('/register');
+        return res.redirect('/register');
     }
     const hashed = await bcrypt.hash(password, 12);
     user = new UserModel({
