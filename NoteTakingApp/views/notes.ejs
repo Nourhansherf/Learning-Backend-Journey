@@ -17,13 +17,13 @@
         <ul class="admin-posts">
             <% data.forEach(note => { %>
              <li>
-                <a href="/note/<%= note._id %>">
+                <a href="/notes/note/<%= note._id %>">
                     <%= note.title %> &nearr;
                 </a>
                 <div class="admin-post-controls">
-                    <a href="/edit-note/<%= note._id %>" class="btn">Edit</a>
+                    <a href="/notes/edit-note/<%= note._id %>" class="btn">Edit</a>
 
-                    <form action="/delete-note/<%= note._id %>?_method=DELETE" method="post">
+                    <form action="/notes/delete-note/<%= note._id %>?_method=DELETE" method="post">
                         <input type="submit" value="Delete" class="btn-delete btn">
                     </form>
                 </div>

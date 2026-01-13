@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <a href="/notes">&larr; Back</a>
+        <h2><%= note.title %></h2>
+        <p><%= note.body %></p>
+        <div class="admin-post-controls">
+            <a href="/notes/edit-note/<%= note._id %>" class="btn">Edit</a>
+            <form action="/notes/delete-note/<%= note._id %>?_method=DELETE" method="post" style="display:inline">
+                <input type="submit" value="Delete" class="btn-delete btn">
+            </form>
+        </div>
+        <footer>
+            <br><hr><br>
+            &copy; <%= new Date().getFullYear();  %> Noura . Built with NodeJs & MongoDB
+        </footer>
+    </div>
+</body>
+</html>
