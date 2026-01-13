@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Note = require('../models/notes');
+const path = require('path');
 const multer = require('multer');
 
 const isAuth = (req, res, next) => {
@@ -13,7 +14,7 @@ const isAuth = (req, res, next) => {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '/public/images');
+        cb(null, path.join(__dirname, '..', 'public', 'images'));
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname));
