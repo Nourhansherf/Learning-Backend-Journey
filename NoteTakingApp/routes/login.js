@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
         return res.redirect('/login');
     }
 
+    req.session.isAuth = true;
     res.redirect('/notes');
 })
 
