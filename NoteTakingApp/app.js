@@ -5,6 +5,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const connectDB = require('./config/db');
+const methodOverride = require('method-override');
 const session = require('express-session');
 const MongoSession = require('connect-mongodb-session')(session);
 
@@ -22,6 +23,15 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// support PUT & DELETE from forms using ?_method=PUT
+// support overriding method via query string (e.g. ?_method=PUT) or form field
+app.use(methodOverride(function (req, res) {
+  if (req.query && typeof req.query._method === 'string') {
+    return req.query._method;
+  }
+  // fallback to default behaviour (body or header) if needed
+  return req.body && req.body._method;
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
