@@ -10,6 +10,10 @@ const PostSchema = new schema({
         type: String,
         require: true,
     },
+    imagePath: {
+        type: String,
+        default: null,
+    },
     createAt: {
         type: Date,
         default: Date.now,

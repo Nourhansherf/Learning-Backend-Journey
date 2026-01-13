@@ -10,6 +10,11 @@
     <div class="container">
         <a href="/notes">&larr; Back</a>
         <h2><%= note.title %></h2>
+        <% if (note.imagePath) { %>
+            <div class="note-image">
+                <img src="<%= note.imagePath %>" alt="note image" style="max-width:100%;height:auto;" />
+            </div>
+        <% } %>
         <p><%= note.body %></p>
         <div class="admin-post-controls">
             <a href="/notes/edit-note/<%= note._id %>" class="btn">Edit</a>
@@ -17,6 +22,13 @@
                 <input type="submit" value="Delete" class="btn-delete btn">
             </form>
         </div>
+
+        <hr />
+        <h3>Upload / Replace Image</h3>
+        <form action="/notes/note/<%= note._id %>/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required />
+            <input type="submit" value="Upload Image" />
+        </form>
         <footer>
             <br><hr><br>
             &copy; <%= new Date().getFullYear();  %> Noura . Built with NodeJs & MongoDB

@@ -13,16 +13,16 @@
             <a href="/notes/add-note" class="button">+ Add New</a>
         </div>
 
-        <form action="/notes/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" class="btn">
-            <input type="submit" value="upload" class="btn">
-        </form>
+        <!-- per-note images shown in the list below -->
 
         <!-- we will add the notes listing here later -->
         <ul class="admin-posts">
             <% data.forEach(note => { %>
              <li>
                 <a href="/notes/note/<%= note._id %>">
+                    <% if (note.imagePath) { %>
+                        <img src="<%= note.imagePath %>" alt="thumb" style="width:80px;height:60px;object-fit:cover;margin-right:8px;vertical-align:middle;" />
+                    <% } %>
                     <%= note.title %> &nearr;
                 </a>
                 <div class="admin-post-controls">
