@@ -13,6 +13,11 @@
             <a href="/notes/add-note" class="button">+ Add New</a>
         </div>
 
+        <form action="/notes/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" class="btn">
+            <input type="submit" value="upload" class="btn">
+        </form>
+
         <!-- we will add the notes listing here later -->
         <ul class="admin-posts">
             <% data.forEach(note => { %>

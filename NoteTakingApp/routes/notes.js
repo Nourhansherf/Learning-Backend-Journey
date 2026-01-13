@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Note = require('../models/notes');
+const multer = require('multer');
 
 const isAuth = (req, res, next) => {
     if (req.session.isAuth) {
@@ -9,6 +10,17 @@ const isAuth = (req, res, next) => {
         res.redirect('/');
     }
 }
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, '/public/images');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage: storage });
 
 // notes
 router.get('/', isAuth, async (req, res) => {
@@ -20,6 +32,10 @@ router.get('/', isAuth, async (req, res) => {
         res.render('error', { message: 'Unable to load notes', error: err });
     }
 });
+
+router.post('/upload', upload.single('image'), (req, res) => {
+    res.redirect('/notes');
+})
 
 //add note
 router.get('/add-note', isAuth, (req, res) => {
