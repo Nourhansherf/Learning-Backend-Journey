@@ -21,6 +21,10 @@
     - How to add TypeScript to my Express project 
 - [ ] [Practice Projects](./practice%20projects/)
     - Here i watched people making projects and leared from them
+- [ ] [Project6](./Project6/)
+    - Learned RESTfull API
+    - Learned how to make clean code
+    - Learned Postman & added the postman collection in my code
 
 
 
