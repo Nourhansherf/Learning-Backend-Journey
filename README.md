@@ -25,6 +25,9 @@
     - Learned RESTfull API
     - Learned how to make clean code
     - Learned Postman & added the postman collection in my code
+- [ ] [Project7](./Project7/)
+    - Learned JWT Tokens 
+    - Added Login and Registeration functionality
 
 
 
