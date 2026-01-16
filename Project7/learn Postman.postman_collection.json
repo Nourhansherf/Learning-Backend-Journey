@@ -1,139 +1,197 @@
 {
-	"info": {
-		"_postman_id": "29a3998f-97da-4a5a-97ff-971be6def241",
-		"name": "learn Postman",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "51516321",
-		"_collection_link": "https://nourhansherf-4238409.postman.co/workspace/personal~0ae30cc0-60be-47d3-8c37-10d60d644b9a/collection/51516321-29a3998f-97da-4a5a-97ff-971be6def241?action=share&source=collection_link&creator=51516321"
-	},
-	"item": [
-		{
-			"name": "Get all courses",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/courses",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"courses"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get single course",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"NodeJS Course\",\r\n    \"price\": 1500\r\n}"
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/courses/6968e6a9d7196a1f2ee5c240",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"courses",
-						"6968e6a9d7196a1f2ee5c240"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Add course",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"NodeJS Course\",\r\n    \"price\": 1500\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/courses",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"courses"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update course",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"JavaScript Course\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/courses/6968e6a9d7196a1f2ee5c240",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"courses",
-						"6968e6a9d7196a1f2ee5c240"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete course",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/courses/6968e9a80bd252f5d1c1928b",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"courses",
-						"6968e9a80bd252f5d1c1928b"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "29a3998f-97da-4a5a-97ff-971be6def241",
+    "name": "learn Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51516321",
+    "_collection_link": "https://go.postman.co/collection/51516321-29a3998f-97da-4a5a-97ff-971be6def241?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get all courses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/coursesssssss",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "coursesssssss"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get single course",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"NodeJS Course\",\r\n    \"price\": 1500\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/courses/6968e6a9d71",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "courses",
+            "6968e6a9d71"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add course",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"price\": \"1000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/courses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update course",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"Express course\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/courses/69690a5be88c49e8d377baa8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "courses",
+            "69690a5be88c49e8d377baa8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete course",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/courses/69690a5be88c49e8d377baa8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "courses",
+            "69690a5be88c49e8d377baa8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get-AllUsers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Nourhan\",\r\n    \"lastName\": \"Sherif\",\r\n    \"email\" : \"nourhan@test.com\",\r\n    \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
 }
