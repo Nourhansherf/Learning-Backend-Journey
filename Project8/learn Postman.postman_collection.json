@@ -1,0 +1,295 @@
+{
+  "info": {
+    "_postman_id": "29a3998f-97da-4a5a-97ff-971be6def241",
+    "name": "learn Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51516321",
+    "_collection_link": "https://go.postman.co/collection/51516321-29a3998f-97da-4a5a-97ff-971be6def241?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "Get all courses",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{JWT}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/api/courses",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get single course",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"NodeJS Course\",\r\n    \"price\": 1500\r\n}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/courses/6968e6a9d71",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                "6968e6a9d71"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update course",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Express course\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/courses/69690a5be88c49e8d377baa8",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                "69690a5be88c49e8d377baa8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add course",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{JWT}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"course1\",\r\n    \"price\": \"1000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/courses",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete course",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{JWT}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/api/courses/69690a5be88c49e8d377baa8",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                "69690a5be88c49e8d377baa8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get-AllUsers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vdXJoYW5AdGVzdC5jb20iLCJpZCI6IjY5NmE2MGExNWYxNzVhMGZiZDg3YmNjZCIsImlhdCI6MTc2ODU5MTQ1MSwiZXhwIjoxNzY4NTkxNTExfQ.x8hNpoqfArG7N2GH5e0D9RTXagCwwQABB_Gw0gnRR_0",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/api/users",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "firstName",
+                  "value": "Nourhan",
+                  "type": "text"
+                },
+                {
+                  "key": "lastName",
+                  "value": "Sherif",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "nourhan3@email.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "password123",
+                  "type": "text"
+                },
+                {
+                  "key": "role",
+                  "value": "USER",
+                  "type": "text"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "ed6f7f80-d81c-40b5-9eb4-f927849e484b",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/users/register",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"JWT\", pm.response.json().data.token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\" : \"nourhan2@email.com\",\r\n    \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/users/login",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "preview",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/uploads/Profile.png",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "uploads",
+            "Profile.png"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

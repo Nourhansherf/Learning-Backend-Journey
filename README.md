@@ -28,6 +28,9 @@
 - [ ] [Project7](./Project7/)
     - Learned JWT Tokens 
     - Added Login and Registeration functionality
+- [ ] [Project8](./Project8/)
+    - Enhancement for my API
+    - Added file Upload functionality
 
 
 
