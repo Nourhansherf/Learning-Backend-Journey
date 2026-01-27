@@ -31,6 +31,10 @@
 - [ ] [Project8](./Project8/)
     - Enhancement for my API
     - Added file Upload functionality
+- [ ] [Project9](./Project9/)
+    - Learned nestJS 
+    - how to connect to database
+    - TypeORM
 
 
 
